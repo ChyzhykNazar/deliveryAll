@@ -21,9 +21,6 @@ public class SignInControllerForAdministrator {
     private AnchorPane backgroundAnchorPane;
 
     @FXML
-    private Button signUpButton;
-
-    @FXML
     private Button signInButton;
 
     @FXML
