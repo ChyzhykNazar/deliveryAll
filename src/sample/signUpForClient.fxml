@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backgroundAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpControllerForClient">
+    <children>
+        <AnchorPane prefHeight="98.0" prefWidth="1024.0" style="-fx-background-color: #131921;">
+            <children>
+                <Label layoutX="333.0" layoutY="10.0" text="deliveryAll" textFill="WHITE">
+                    <font>
+                        <Font name="Verdana Bold Italic" size="60.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <AnchorPane layoutX="-6.0" layoutY="98.0" prefHeight="502.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <Button fx:id="signUpButton" layoutX="358.0" layoutY="351.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="310.0" style="-fx-background-color: #FEBD69;" text="Зареєструватися" textFill="WHITE">
+                    <font>
+                        <Font name="Verdana Bold Italic" size="15.0" />
+                    </font>
+                </Button>
+                <PasswordField fx:id="passwordField" layoutX="45.0" layoutY="174.0" prefHeight="46.0" prefWidth="390.0" promptText="Пароль">
+                    <font>
+                        <Font name="Verdana Bold Italic" size="14.0" />
+                    </font>
+                </PasswordField>
+                <TextField fx:id="loginField" layoutX="45.0" layoutY="96.0" prefHeight="46.0" prefWidth="390.0" promptText="Логін">
+                    <font>
+                        <Font name="Verdana Bold Italic" size="14.0" />
+                    </font>
+                </TextField>
+            <Label layoutX="402.0" layoutY="20.0" text="Реєстрація">
+               <font>
+                  <Font name="Verdana Bold Italic" size="35.0" />
+               </font>
+            </Label>
+            <TextField fx:id="lastNameField" layoutX="580.0" layoutY="96.0" prefHeight="46.0" prefWidth="390.0" promptText="Прізвище">
+               <font>
+                  <Font name="Verdana Bold Italic" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="firstNameField" layoutX="580.0" layoutY="174.0" prefHeight="46.0" prefWidth="390.0" promptText="Ім'я">
+               <font>
+                  <Font name="Verdana Bold Italic" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="phoneField" layoutX="45.0" layoutY="251.0" prefHeight="46.0" prefWidth="390.0" promptText="Телефон">
+               <font>
+                  <Font name="Verdana Bold Italic" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="emailField" layoutX="580.0" layoutY="251.0" prefHeight="46.0" prefWidth="390.0" promptText="Email">
+               <font>
+                  <Font name="Verdana Bold Italic" size="14.0" />
+               </font>
+            </TextField>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
