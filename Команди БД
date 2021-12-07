@@ -1,0 +1,210 @@
+/*Створення схеми*/
+
+CREATE SCHEMA `deliveryall` ;
+
+/*Створення таблиці Bike*/
+
+CREATE TABLE `deliveryall`.`bike` (
+  `idbike` INT NOT NULL AUTO_INCREMENT,
+  `color` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idbike`));
+
+/*Створення таблиці Motobike*/
+
+CREATE TABLE `deliveryall`.`motobike` (
+  `idmotobike` INT NOT NULL AUTO_INCREMENT,
+  `brand` VARCHAR(45) NOT NULL,
+  `color` VARCHAR(45) NOT NULL,
+  `number` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idmotobike`));
+
+/*Створення таблиці Car*/
+
+CREATE TABLE `deliveryall`.`car` (
+  `idcar` INT NOT NULL AUTO_INCREMENT,
+  `type` VARCHAR(45) NOT NULL,
+  `brand` VARCHAR(45) NOT NULL,
+  `color` VARCHAR(45) NOT NULL,
+  `number` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idcar`));
+
+/*Створення таблиці PersonalData*/
+
+CREATE TABLE `deliveryall`.`personaldata` (
+  `idpersonalData` INT NOT NULL AUTO_INCREMENT,
+  `login` CHAR(50) NOT NULL,
+  `password` CHAR(60) NOT NULL,
+  `firstName` VARCHAR(45) NOT NULL,
+  `lastName` VARCHAR(45) NOT NULL,
+  `phone` INT(12) NOT NULL,
+  `email` CHAR(64) NOT NULL,
+  PRIMARY KEY (`idpersonalData`));
+
+/*Створення таблиці TransportData*/
+
+CREATE TABLE `deliveryall`.`transportdata` (
+  `idtransportdata` INT NOT NULL AUTO_INCREMENT,
+  `idcar` INT NULL,
+  `idmotobike` INT NULL,
+  `idbike` INT NULL,
+  PRIMARY KEY (`idtransportdata`));
+
+/*Створення таблиці Carrier*/
+
+CREATE TABLE `deliveryall`.`carrier` (
+  `idcarrier` INT NOT NULL,
+  `idtransportdata` INT NOT NULL,
+  PRIMARY KEY (`idcarrier`));
+
+/*Створення таблиці Client*/
+
+CREATE TABLE `deliveryall`.`client` (
+  `idclient` INT NOT NULL,
+  PRIMARY KEY (`idclient`));
+
+/*Створення таблиці Form*/
+
+CREATE TABLE `deliveryall`.`form` (
+  `idform` INT NOT NULL,
+  `idsender` INT NOT NULL,
+  `idrecipient` INT NOT NULL,
+  `shippingaddress` VARCHAR(45) NOT NULL,
+  `receivingaddress` VARCHAR(45) NOT NULL,
+  `lenght` DOUBLE NOT NULL,
+  `width` DOUBLE NOT NULL,
+  `height` DOUBLE NOT NULL,
+  `costdeparture` DOUBLE NOT NULL,
+  `costparcel` DOUBLE NOT NULL,
+  `dateshipping` DATE NOT NULL,
+  PRIMARY KEY (`idform`));
+
+/*Створення таблиці Departure*/
+
+CREATE TABLE `deliveryall`.`departure` (
+  `iddeparture` INT NOT NULL,
+  `idform` INT NOT NULL,
+  `idcarrier` INT NOT NULL,
+  `statusofdeparture` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`iddeparture`));
+
+/*Утворення зв'язку між Bike і Transportdata*/
+
+ALTER TABLE `deliveryall`.`transportdata` 
+ADD INDEX `idbikefk_idx` (`idbike` ASC) VISIBLE;
+;
+ALTER TABLE `deliveryall`.`transportdata` 
+ADD CONSTRAINT `idbikefk`
+  FOREIGN KEY (`idbike`)
+  REFERENCES `deliveryall`.`bike` (`idbike`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+/*Утворення зв'язку між Motobike і Transportdata*/
+
+ALTER TABLE `deliveryall`.`transportdata` 
+ADD INDEX `idmotobikefk_idx` (`idmotobike` ASC) VISIBLE;
+;
+ALTER TABLE `deliveryall`.`transportdata` 
+ADD CONSTRAINT `idmotobikefk`
+  FOREIGN KEY (`idmotobike`)
+  REFERENCES `deliveryall`.`motobike` (`idmotobike`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+/*Утворення зв'язку між Car і Transportdata*/
+
+ALTER TABLE `deliveryall`.`transportdata` 
+ADD INDEX `idcar_idx` (`idcar` ASC) VISIBLE;
+;
+ALTER TABLE `deliveryall`.`transportdata` 
+ADD CONSTRAINT `idcar`
+  FOREIGN KEY (`idcar`)
+  REFERENCES `deliveryall`.`car` (`idcar`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+/*Утворення зв'язку між Carrier і PersonalData*/
+
+ALTER TABLE `deliveryall`.`carrier` 
+ADD CONSTRAINT `idcarrierfk`
+  FOREIGN KEY (`idcarrier`)
+  REFERENCES `deliveryall`.`personaldata` (`idpersonalData`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+/*Утворення зв'язку між Carrier і Transportdata*/
+
+ALTER TABLE `deliveryall`.`carrier` 
+ADD INDEX `idtransportdatafk_idx` (`idtransportdata` ASC) VISIBLE;
+;
+ALTER TABLE `deliveryall`.`carrier` 
+ADD CONSTRAINT `idtransportdatafk`
+  FOREIGN KEY (`idtransportdata`)
+  REFERENCES `deliveryall`.`transportdata` (`idtransportdata`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+/*Утворення зв'язку між Client і PersonalData*/
+
+ALTER TABLE `deliveryall`.`client` 
+ADD CONSTRAINT `idclientfk`
+  FOREIGN KEY (`idclient`)
+  REFERENCES `deliveryall`.`personaldata` (`idpersonalData`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+/*Утворення зв'язку між Form(Sender) і PersonalData*/
+
+ALTER TABLE `deliveryall`.`form` 
+ADD INDEX `idsenderfk_idx` (`idsender` ASC) VISIBLE;
+;
+ALTER TABLE `deliveryall`.`form` 
+ADD CONSTRAINT `idsenderfk`
+  FOREIGN KEY (`idsender`)
+  REFERENCES `deliveryall`.`personaldata` (`idpersonalData`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+/*Утворення зв'язку між Form(Recipient) і PersonalData*/
+
+ALTER TABLE `deliveryall`.`form` 
+ADD INDEX `idrecipient_idx` (`idrecipient` ASC) VISIBLE;
+;
+ALTER TABLE `deliveryall`.`form` 
+ADD CONSTRAINT `idrecipientfk`
+  FOREIGN KEY (`idrecipient`)
+  REFERENCES `deliveryall`.`personaldata` (`idpersonalData`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+/*Утворення зв'язку між Departure i Form*/
+
+ALTER TABLE `deliveryall`.`departure` 
+ADD INDEX `idformfk_idx` (`idform` ASC) VISIBLE;
+;
+ALTER TABLE `deliveryall`.`departure` 
+ADD CONSTRAINT `idformfk`
+  FOREIGN KEY (`idform`)
+  REFERENCES `deliveryall`.`form` (`idform`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+/*Утворення зв'язку між Departure i Carrier*/
+
+ALTER TABLE `deliveryall`.`departure` 
+ADD INDEX `idcarrier1fk_idx` (`idcarrier` ASC) VISIBLE;
+;
+ALTER TABLE `deliveryall`.`departure` 
+ADD CONSTRAINT `idcarrier1fk`
+  FOREIGN KEY (`idcarrier`)
+  REFERENCES `deliveryall`.`carrier` (`idcarrier`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+/*Додавання даних в PersonalData вручну*/
+
+INSERT INTO `deliveryall`.`personaldata` (`idpersonalData`, `login`, `password`, `firstName`, `lastName`, `phone`, `email`) VALUES ('1', 'qwerty', 'qwerty', 'Nazar', 'Chyzhyk', '380502305476', 'chizhik2002@ukr.net');
+
+/*Додавання даних в Client*/
+
+INSERT INTO `deliveryall`.`client` (`idclient`) VALUES ('1');
