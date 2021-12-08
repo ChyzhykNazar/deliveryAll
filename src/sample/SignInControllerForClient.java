@@ -30,7 +30,7 @@ public class SignInControllerForClient {
 
     @FXML
     void initialize() {
-        /*signInButton.setOnAction(actionEvent -> {
+        signInButton.setOnAction(actionEvent -> {
             String login = loginField.getText().trim();
             String password = passwordField.getText().trim();
 
@@ -45,11 +45,11 @@ public class SignInControllerForClient {
                 loginField.clear();
                 passwordField.clear();
             }
-        });*/
+        });
     }
 
-    /*private void loginUser(String login, String password) {
+    private void loginUser(String login, String password) {
         DatabaseHandler databaseHandler;
 
-    }*/
+    }
 }
