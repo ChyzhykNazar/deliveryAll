@@ -16,6 +16,11 @@
                         <Font name="Verdana Bold Italic" size="60.0" />
                     </font>
                 </Label>
+                <Button fx:id="signUpButton" layoutX="781.0" layoutY="25.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="226.0" style="-fx-background-color: #FEBD69;" text="Зареєструватися" textFill="WHITE">
+                    <font>
+                        <Font name="Verdana Bold Italic" size="15.0" />
+                    </font>
+                </Button>
             </children>
         </AnchorPane>
         <AnchorPane layoutY="97.0" prefHeight="502.0" prefWidth="1024.0">

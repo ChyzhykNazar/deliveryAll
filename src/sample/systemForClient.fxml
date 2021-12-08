@@ -40,7 +40,7 @@
                            <content>
                               <AnchorPane prefHeight="502.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;">
                                  <children>
-                                    <Button fx:id="confirmDeparture" layoutX="357.0" layoutY="404.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="310.0" style="-fx-background-color: #FEBD69;" text="Оформити замовлення" textFill="WHITE">
+                                    <Button fx:id="confirmDeparture" layoutX="358.0" layoutY="351.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="310.0" style="-fx-background-color: #FEBD69;" text="Оформити замовлення" textFill="WHITE">
                                        <font>
                                           <Font name="Verdana Bold Italic" size="15.0" />
                                        </font>
@@ -55,7 +55,7 @@
                                           <Font name="Verdana Bold Italic" size="14.0" />
                                        </font>
                                     </TextField>
-                                    <TextField fx:id="shippingAdressField" layoutX="45.0" layoutY="289.0" prefHeight="46.0" prefWidth="390.0" promptText="Адреса відправлення">
+                                    <TextField fx:id="shippingAdressField" layoutX="45.0" layoutY="237.0" prefHeight="46.0" prefWidth="390.0" promptText="Адреса відправлення">
                                        <font>
                                           <Font name="Verdana Bold Italic" size="14.0" />
                                        </font>
@@ -65,7 +65,7 @@
                                           <Font name="Verdana Bold Italic" size="14.0" />
                                        </font>
                                     </TextField>
-                                    <TextField fx:id="receivingAddressField" layoutX="45.0" layoutY="345.0" prefHeight="46.0" prefWidth="390.0" promptText="Адреса отримання">
+                                    <TextField fx:id="receivingAddressField" layoutX="45.0" layoutY="292.0" prefHeight="46.0" prefWidth="390.0" promptText="Адреса отримання">
                                        <font>
                                           <Font name="Verdana Bold Italic" size="14.0" />
                                        </font>
@@ -90,7 +90,7 @@
                                           <Font name="Verdana Bold Italic" size="14.0" />
                                        </font>
                                     </TextField>
-                                    <TextField fx:id="dateShippingField" layoutX="575.0" layoutY="289.0" prefHeight="46.0" prefWidth="390.0" promptText="Дата відправлення">
+                                    <TextField fx:id="dateShppingField" layoutX="575.0" layoutY="289.0" prefHeight="46.0" prefWidth="390.0" promptText="Дата відправлення">
                                        <font>
                                           <Font name="Verdana Bold Italic" size="14.0" />
                                        </font>
@@ -101,11 +101,6 @@
                                        </font>
                                     </TextField>
                                     <TextField fx:id="widthField" layoutX="575.0" layoutY="69.0" prefHeight="46.0" prefWidth="390.0" promptText="Ширина">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField fx:id="phoneRecipientField" layoutX="45.0" layoutY="234.0" prefHeight="46.0" prefWidth="390.0" promptText="Номер телефону отримувача">
                                        <font>
                                           <Font name="Verdana Bold Italic" size="14.0" />
                                        </font>

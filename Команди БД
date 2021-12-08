@@ -208,3 +208,8 @@ INSERT INTO `deliveryall`.`personaldata` (`idpersonalData`, `login`, `password`,
 /*Додавання даних в Client*/
 
 INSERT INTO `deliveryall`.`client` (`idclient`) VALUES ('1');
+
+/*Додавання нової колонки в таблицю Form*/
+
+ALTER TABLE `deliveryall`.`form` 
+ADD COLUMN `weight` DOUBLE NOT NULL AFTER `height`;
