@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="backgroundAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.DepartureInformationController">
+   <children>
+      <AnchorPane prefHeight="98.0" prefWidth="1024.0" style="-fx-background-color: #131921;">
+         <children>
+            <Label layoutX="333.0" layoutY="10.0" text="deliveryAll" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold Italic" size="60.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="informationAnchorPane" layoutX="-6.0" layoutY="98.0" prefHeight="502.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <Label layoutX="85.0" layoutY="53.0" text="Ім'я відправника">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="firstNameSender" layoutX="378.0" layoutY="53.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="83.0" text="Прізвище вілправника">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lastNameSender" layoutX="378.0" layoutY="83.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="113.0" text="Номер відправника">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="numberSender" layoutX="378.0" layoutY="113.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="143.0" text="Ім'я отримувача">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="firstNameRecipient" layoutX="378.0" layoutY="143.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="173.0" text="Прізвище отримувача">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lastNameRecipient" layoutX="378.0" layoutY="173.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="203.0" text="Номер отримувача">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="numberRecipient" layoutX="378.0" layoutY="203.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="233.0" text="Адреса відправлення">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="shippingAddress" layoutX="378.0" layoutY="233.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="263.0" text="Адреса отримання">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="receivingAddress" layoutX="378.0" layoutY="263.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="584.0" layoutY="53.0" text="Довжина">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lenght" layoutX="877.0" layoutY="53.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="584.0" layoutY="83.0" text="Ширина">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="width" layoutX="877.0" layoutY="83.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="584.0" layoutY="113.0" text="Висота">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="heigth" layoutX="875.0" layoutY="113.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="584.0" layoutY="173.0" text="Ціна перевезенння">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="costDeparture" layoutX="875.0" layoutY="173.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="584.0" layoutY="203.0" text="Ціна відправлення">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="costParcel" layoutX="875.0" layoutY="203.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="584.0" layoutY="233.0" text="Вміст відправлення">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="contentsDeparture" layoutX="875.0" layoutY="233.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="584.0" layoutY="263.0" text="Дата відправлення">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateDeparture" layoutX="875.0" layoutY="263.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="582.0" layoutY="143.0" text="Вага відправлення">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="weight" layoutX="875.0" layoutY="143.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="431.0" layoutY="14.0" text="Відправлення">
+               <font>
+                  <Font name="Verdana Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="321.0" text="Ім'я перевізника">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="firstNameCarrier" layoutX="376.0" layoutY="321.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="351.0" text="Прізвище перевізника">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lastNameCarrier" layoutX="376.0" layoutY="351.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="381.0" text="Номер перевізника">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="numberCarrier" layoutX="376.0" layoutY="381.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="411.0" text="Пошта перевізника">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailCarrier" layoutX="376.0" layoutY="411.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="582.0" layoutY="321.0" text="Тип автомобіля">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="type" layoutX="875.0" layoutY="321.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="582.0" layoutY="351.0" text="Марка">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="brand" layoutX="875.0" layoutY="351.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="582.0" layoutY="381.0" text="Колір">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="color" layoutX="875.0" layoutY="381.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="580.0" layoutY="411.0" text="Номер">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="number" layoutX="875.0" layoutY="411.0" text="Пусто">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="446.0" layoutY="282.0" text="Перевізник">
+               <font>
+                  <Font name="Verdana Bold Italic" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

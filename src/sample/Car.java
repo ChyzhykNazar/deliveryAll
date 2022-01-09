@@ -16,6 +16,14 @@ public class Car {
         this.number = number;
     }
 
+    public Car(int idCar, String type, String color, String  brand, String number){
+        this.idCar = idCar;
+        this.type = type;
+        this.color = color;
+        this.brand = brand;
+        this.number = number;
+    }
+
     public int getIdCar() {
         return idCar;
     }

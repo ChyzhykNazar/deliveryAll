@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="backgroundAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SystemControllerForClient">
+<AnchorPane fx:id="backgroundAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SignUpControllerForCarrier">
     <children>
       <TabPane layoutY="98.0" prefHeight="365.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -158,7 +158,12 @@
                                  <content>
                                     <AnchorPane prefHeight="390.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;">
                                        <children>
-                                          <TextField fx:id="colorBikeField" layoutX="317.0" layoutY="40.0" prefHeight="46.0" prefWidth="390.0" promptText="Колір">
+                                          <TextField fx:id="colorBikeField" layoutX="69.0" layoutY="40.0" prefHeight="46.0" prefWidth="390.0" promptText="Колір">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="uniqueNumberField" layoutX="569.0" layoutY="40.0" prefHeight="46.0" prefWidth="390.0" promptText="Унікальний номер">
                                              <font>
                                                 <Font name="Verdana Bold Italic" size="14.0" />
                                              </font>

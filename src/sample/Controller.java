@@ -14,12 +14,6 @@ import javafx.stage.Stage;
 public class Controller {
 
     @FXML
-    private ResourceBundle resources;
-
-    @FXML
-    private URL location;
-
-    @FXML
     private AnchorPane backgroundAnchorPane;
 
     @FXML
@@ -28,8 +22,6 @@ public class Controller {
     @FXML
     private Button clientButton;
 
-    @FXML
-    private Button administratorButton;
 
     @FXML
     void initialize() {
@@ -51,36 +43,17 @@ public class Controller {
         });
 
         clientButton.setOnAction(actionEvent -> {
-            carrierButton.getScene().getWindow().hide();
+            clientButton.getScene().getWindow().hide();
             FXMLLoader loader = new FXMLLoader() ;
             loader.setLocation(getClass().getResource("/sample/signInForClient.fxml"));
-
             try {
                 loader.load();
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
-            Parent root = loader. getRoot () ;
-            Stage stage= new Stage() ;
-            stage. setScene(new Scene( root));
-            stage.show();
-        });
-
-        administratorButton.setOnAction(actionEvent -> {
-            carrierButton.getScene().getWindow().hide();
-            FXMLLoader loader = new FXMLLoader() ;
-            loader.setLocation(getClass().getResource("/sample/signInForAdministrator.fxml"));
-
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Parent root = loader. getRoot () ;
-            Stage stage= new Stage() ;
-            stage. setScene(new Scene( root));
+            Parent root = loader.getRoot ();
+            Stage stage= new Stage();
+            stage.setScene(new Scene(root));
             stage.show();
         });
     }
