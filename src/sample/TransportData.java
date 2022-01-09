@@ -3,13 +3,9 @@ package sample;
 public class TransportData {
     private int idTransportData;
     private Car car;
-    private Motobike motoBike;
-    private Bike bike;
 
-    public TransportData(Car car, Motobike motoBike, Bike bike) {
+    public TransportData(Car car) {
         this.car = car;
-        this.motoBike = motoBike;
-        this.bike = bike;
     }
 
     public TransportData(){}
@@ -22,25 +18,13 @@ public class TransportData {
         return car;
     }
 
-    public Motobike getMotoBike() { return motoBike; }
-
-    public Bike getBike() {
-        return bike;
-    }
-
     public void setIdTransportData(int idTransportData) {
         this.idTransportData = idTransportData;
     }
-
 
     public void setCar(Car car) {
         this.car = car;
     }
 
-    public void setMotoBike(Motobike motoBike) { this.motoBike = motoBike; }
-
-    public void setBike(Bike bike) {
-        this.bike = bike;
-    }
 
 }

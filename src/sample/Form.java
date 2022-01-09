@@ -16,6 +16,7 @@ public class Form {
     private String receivingAddress;
     private double costDeparture;
     private double costParcel;
+    private double contentsShipping;
     private Date dateOfDeparture;
     private Form[] forms;
 
@@ -93,6 +94,10 @@ public class Form {
         return costDeparture;
     }
 
+    public double getContentsShipping() {
+        return contentsShipping;
+    }
+
     public Date getDateOfDeparture() {
         return dateOfDeparture;
     }
@@ -152,6 +157,8 @@ public class Form {
     public void setDateOfDeparture(Date dateOfDeparture) {
         this.dateOfDeparture = dateOfDeparture;
     }
+
+    public void setContentsShipping(double contentsShipping) { this.contentsShipping = contentsShipping; }
 
     public Form[] getForms() {
         return forms;

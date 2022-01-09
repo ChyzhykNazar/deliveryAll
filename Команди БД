@@ -213,3 +213,74 @@ INSERT INTO `deliveryall`.`client` (`idclient`) VALUES ('1');
 
 ALTER TABLE `deliveryall`.`form` 
 ADD COLUMN `weight` DOUBLE NOT NULL AFTER `height`;
+
+/*Додавання колонки Unique number */
+
+ALTER TABLE `deliveryall`.`bike` 
+ADD COLUMN `uniquenumber` INT NOT NULL AFTER `color`;
+
+/*Перейменування стовпчиків в motobike*/
+
+ALTER TABLE `deliveryall`.`motobike` 
+CHANGE COLUMN `brand` `brandmotobike` VARCHAR(45) NOT NULL ,
+CHANGE COLUMN `color` `colormotobike` VARCHAR(45) NOT NULL ,
+CHANGE COLUMN `number` `numbermotobike` VARCHAR(45) NOT NULL ;
+
+/*Перейменування стовпчиків в bike*/
+
+ALTER TABLE `deliveryall`.`bike` 
+CHANGE COLUMN `color` `colorbike` VARCHAR(45) NOT NULL ;
+
+/*Додавання нового стовпчика у FORM */
+
+ALTER TABLE `deliveryall`.`form` 
+ADD COLUMN `contentshipping` VARCHAR(45) NOT NULL AFTER `costparcel`;
+
+/*Змінна параметрів таблиці PersonalData*/
+
+ALTER TABLE `deliveryall`.`personaldata` 
+CHANGE COLUMN `login` `login` CHAR(50) NULL ,
+CHANGE COLUMN `password` `password` CHAR(60) NULL ,
+CHANGE COLUMN `email` `email` CHAR(64) NULL ;
+
+/*Видалення з Departure*/
+
+DELETE FROM `deliveryall`.`departure` WHERE (`iddeparture` = '13');
+
+/*Видалення з Form*/
+
+DELETE FROM `deliveryall`.`form` WHERE (`idform` = '7');
+
+/**/
+ALTER TABLE `deliveryall`.`carrier` 
+ADD CONSTRAINT `idcarrierfk`
+  FOREIGN KEY (`idcarrier`)
+  REFERENCES `deliveryall`.`personaldata` (`idpersonalData`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+  /**/
+
+ALTER TABLE `deliveryall`.`form` 
+DROP FOREIGN KEY `idsenderfk`;
+ALTER TABLE `deliveryall`.`form` 
+ADD INDEX `idsenderfk_idx` (`idsender` ASC) VISIBLE,
+DROP INDEX `idsenderfk_idx` ;
+;
+ALTER TABLE `deliveryall`.`form` 
+ADD CONSTRAINT `idsenderfk`
+  FOREIGN KEY (`idsender`)
+  REFERENCES `deliveryall`.`client` (`idclient`);
+
+
+/**/
+
+ALTER TABLE `deliveryall`.`form` 
+ADD INDEX `idrecipient_idx` (`idrecipient` ASC) VISIBLE;
+;
+ALTER TABLE `deliveryall`.`form` 
+ADD CONSTRAINT `idrecipient`
+  FOREIGN KEY (`idrecipient`)
+  REFERENCES `deliveryall`.`client` (`idclient`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;

@@ -2,203 +2,17 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="backgroundAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Sy">
+<AnchorPane fx:id="backgroundAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SystemControllerForClient">
     <children>
-        <TabPane layoutY="98.0" prefHeight="501.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE">
-            <tabs>
-                <Tab text="Відправлення">
-               <content>
-                  <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
-                    <tabs>
-                      <Tab fx:id="tabCurrentDeparture" text="Поточні відправлення">
-                        <content>
-                          <AnchorPane fx:id="anchorPaneCurrentDeparture" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <ListView fx:id="listviewCurrentDeparture" prefHeight="442.0" prefWidth="1024.0" />
-                                 </children>
-                              </AnchorPane>
-                        </content>
-                      </Tab>
-                      <Tab fx:id="tabArchiveDeparture" text="Архів відправлень">
-                        <content>
-                          <AnchorPane fx:id="anchorPaneArchiveDeparture" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                                 <children>
-                                    <ListView fx:id="listViewArchiveDeparture" prefHeight="444.0" prefWidth="1024.0" />
-                                 </children>
-                              </AnchorPane>
-                        </content>
-                      </Tab>
-                        <Tab text="Оформити відправлення">
-                           <content>
-                              <AnchorPane prefHeight="502.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;">
-                                 <children>
-                                    <Button fx:id="confirmDeparture" layoutX="358.0" layoutY="351.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="310.0" style="-fx-background-color: #FEBD69;" text="Оформити замовлення" textFill="WHITE">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="15.0" />
-                                       </font>
-                                    </Button>
-                                    <TextField fx:id="firstNameSenderField" layoutX="45.0" layoutY="14.0" prefHeight="46.0" prefWidth="390.0" promptText="Ім'я відправника">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField fx:id="lastNameRecipientField" layoutX="45.0" layoutY="182.0" prefHeight="46.0" prefWidth="390.0" promptText="Прізвище отримувача">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField fx:id="shippingAdressField" layoutX="45.0" layoutY="237.0" prefHeight="46.0" prefWidth="390.0" promptText="Адреса відправлення">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField fx:id="firstNameRecipientField" layoutX="45.0" layoutY="127.0" prefHeight="46.0" prefWidth="390.0" promptText="Ім'я отримувача">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField fx:id="receivingAddressField" layoutX="45.0" layoutY="292.0" prefHeight="46.0" prefWidth="390.0" promptText="Адреса отримання">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField fx:id="lenghtField" layoutX="575.0" layoutY="11.0" prefHeight="46.0" prefWidth="390.0" promptText="Довжина">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField fx:id="costDepartureField" layoutX="575.0" layoutY="179.0" prefHeight="46.0" prefWidth="390.0" promptText="Ціна перевезення">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField fx:id="costParcelField" layoutX="575.0" layoutY="234.0" prefHeight="46.0" prefWidth="390.0" promptText="Оціночна вартість посилки">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField fx:id="heightField" layoutX="575.0" layoutY="124.0" prefHeight="46.0" prefWidth="390.0" promptText="Висота">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField fx:id="dateShppingField" layoutX="575.0" layoutY="289.0" prefHeight="46.0" prefWidth="390.0" promptText="Дата відправлення">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField fx:id="lastNameSenderField" layoutX="45.0" layoutY="69.0" prefHeight="46.0" prefWidth="390.0" promptText="Прізвище відправника">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                    <TextField fx:id="widthField" layoutX="575.0" layoutY="69.0" prefHeight="46.0" prefWidth="390.0" promptText="Ширина">
-                                       <font>
-                                          <Font name="Verdana Bold Italic" size="14.0" />
-                                       </font>
-                                    </TextField>
-                                 </children>
-                              </AnchorPane>
-                           </content>
-                        </Tab>
-                    </tabs>
-                  </TabPane>
-               </content>
-                </Tab>
-                <Tab text="Персональна інформація">
-                    <content>
-                        <AnchorPane prefHeight="502.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;">
-                            <children>
-                                <PasswordField fx:id="passwordField" layoutX="45.0" layoutY="197.0" prefHeight="46.0" prefWidth="390.0" promptText="Пароль">
-                                    <font>
-                                        <Font name="Verdana Bold Italic" size="14.0" />
-                                    </font>
-                                </PasswordField>
-                                <TextField fx:id="loginField" layoutX="45.0" layoutY="119.0" prefHeight="46.0" prefWidth="390.0" promptText="Логін">
-                                    <font>
-                                        <Font name="Verdana Bold Italic" size="14.0" />
-                                    </font>
-                                </TextField>
-                                <Label layoutX="402.0" layoutY="32.0" text="Реєстрація">
-                                    <font>
-                                        <Font name="Verdana Bold Italic" size="35.0" />
-                                    </font>
-                                </Label>
-                                <TextField fx:id="lastNameField" layoutX="573.0" layoutY="119.0" prefHeight="46.0" prefWidth="390.0" promptText="Прізвище">
-                                    <font>
-                                        <Font name="Verdana Bold Italic" size="14.0" />
-                                    </font>
-                                </TextField>
-                                <TextField fx:id="firstNameField" layoutX="573.0" layoutY="197.0" prefHeight="46.0" prefWidth="390.0" promptText="Ім'я">
-                                    <font>
-                                        <Font name="Verdana Bold Italic" size="14.0" />
-                                    </font>
-                                </TextField>
-                                <TextField fx:id="phoneField" layoutX="45.0" layoutY="273.0" prefHeight="46.0" prefWidth="390.0" promptText="Телефон">
-                                    <font>
-                                        <Font name="Verdana Bold Italic" size="14.0" />
-                                    </font>
-                                </TextField>
-                                <TextField fx:id="emailField" layoutX="573.0" layoutY="273.0" prefHeight="46.0" prefWidth="390.0" promptText="Email">
-                                    <font>
-                                        <Font name="Verdana Bold Italic" size="14.0" />
-                                    </font>
-                                </TextField>
-                            </children>
-                        </AnchorPane>
-                    </content>
-               <content>
-                  <AnchorPane prefHeight="502.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;">
-                     <children>
-                        <Button fx:id="signUpButton" layoutX="358.0" layoutY="351.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="310.0" style="-fx-background-color: #FEBD69;" text="Змінити" textFill="WHITE">
-                           <font>
-                              <Font name="Verdana Bold Italic" size="15.0" />
-                           </font>
-                        </Button>
-                        <PasswordField fx:id="passwordField" layoutX="45.0" layoutY="151.0" prefHeight="46.0" prefWidth="390.0" promptText="Пароль">
-                           <font>
-                              <Font name="Verdana Bold Italic" size="14.0" />
-                           </font>
-                        </PasswordField>
-                        <TextField fx:id="loginField" layoutX="45.0" layoutY="73.0" prefHeight="46.0" prefWidth="390.0" promptText="Логін">
-                           <font>
-                              <Font name="Verdana Bold Italic" size="14.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="lastNameField" layoutX="580.0" layoutY="73.0" prefHeight="46.0" prefWidth="390.0" promptText="Прізвище">
-                           <font>
-                              <Font name="Verdana Bold Italic" size="14.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="firstNameField" layoutX="579.0" layoutY="151.0" prefHeight="46.0" prefWidth="390.0" promptText="Ім'я">
-                           <font>
-                              <Font name="Verdana Bold Italic" size="14.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="phoneField" layoutX="45.0" layoutY="228.0" prefHeight="46.0" prefWidth="390.0" promptText="Телефон">
-                           <font>
-                              <Font name="Verdana Bold Italic" size="14.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="emailField" layoutX="580.0" layoutY="228.0" prefHeight="46.0" prefWidth="390.0" promptText="Email">
-                           <font>
-                              <Font name="Verdana Bold Italic" size="14.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                  </AnchorPane>
-               </content>
-                </Tab>
-            </tabs>
-        </TabPane>
         <AnchorPane prefHeight="98.0" prefWidth="1024.0" style="-fx-background-color: #131921;">
             <children>
                 <Label layoutX="333.0" layoutY="10.0" text="deliveryAll" textFill="WHITE">
@@ -208,5 +22,231 @@
                 </Label>
             </children>
         </AnchorPane>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+              <TabPane layoutY="94.0" prefHeight="501.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;" tabClosingPolicy="UNAVAILABLE">
+                  <tabs>
+                      <Tab text="Відправлення">
+                     <content>
+                        <TabPane prefHeight="420.0" prefWidth="1024.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab fx:id="tabCurrentDeparture" text="Очікуючі відправлення">
+                              <content>
+                                <AnchorPane fx:id="anchorPaneCurrentDeparture" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tableviewwaitingdeparture" prefHeight="448.0" prefWidth="1024.0">
+                                            <columns>
+                                              <TableColumn fx:id="columnnumberofwaitdeparture" prefWidth="204.8" text="Номер відправлення" />
+                                              <TableColumn fx:id="columnwaitfirstnamesender" prefWidth="204.8" text="Ім'я відправника" />
+                                                <TableColumn fx:id="columnwaitlastnamesender" prefWidth="204.8" text="Прізвище відправника" />
+                                                <TableColumn fx:id="columnwaitfirstnamerecipient" prefWidth="204.8" text="Ім'я отримувача" />
+                                                <TableColumn fx:id="columnwaitlastnamerecipient" prefWidth="204.8" text="Прізвище отримувача" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab fx:id="tabConfirmDeparture" text="Підтверджені відправлення">
+                                 <content>
+                                    <AnchorPane fx:id="anchorPaneConfirmDeparture" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tableviewconfirmingdeparture" prefHeight="448.0" prefWidth="1024.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnnumberofconfirmdeparture" prefWidth="146.29" text="Номер відправлення" />
+                                                <TableColumn fx:id="columnconfirmfirstnamesender" prefWidth="146.29" text="Ім'я відправника" />
+                                                <TableColumn fx:id="columnconfirmlastnamesender" prefWidth="146.29" text="Прізвище відправника" />
+                                                <TableColumn fx:id="columnconfirmfirstnamerecipient" prefWidth="146.29" text="Ім'я отримувача" />
+                                                <TableColumn fx:id="columnconfirmlastnamerecipient" prefWidth="146.29" text="Прізвище отримувача" />
+                                                <TableColumn fx:id="columnconfirmfirstnamecarrier" prefWidth="146.29" text="Ім'я перевізника" />
+                                                <TableColumn fx:id="columnconfirmlastnamecarrier" prefWidth="142.0" text="Прізвище перевізника" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                            <Tab fx:id="tabArchiveDeparture" text="Архів відправлень">
+                                 <content>
+                                    <AnchorPane fx:id="anchorPaneArchiveDeparture" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tableviewarchivingdeparture" prefHeight="448.0" prefWidth="1024.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnnumberofarchivedeparture" prefWidth="146.29" text="Номер відправлення" />
+                                                <TableColumn fx:id="columnarchivefirstnamesender" prefWidth="146.29" text="Ім'я відправника" />
+                                                <TableColumn fx:id="columnarchivelastnamesender" prefWidth="146.29" text="Прізвище відправника" />
+                                                <TableColumn fx:id="columnarchivefirstnamerecipient" prefWidth="146.29" text="Ім'я отримувача" />
+                                                <TableColumn fx:id="columnarchivelastnamerecipient" prefWidth="146.29" text="Прізвище отримувача" />
+                                                <TableColumn fx:id="columnarchivefirstnamecarrier" prefWidth="146.29" text="Ім'я перевізника" />
+                                                <TableColumn fx:id="columnarchivelastnamecarrier" prefWidth="142.0" text="Прізвище перевізника" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                            </Tab>
+                              <Tab fx:id="tabDirectDeparture" text="Прямуючі відправлення">
+                                 <content>
+                                    <AnchorPane fx:id="anchorPaneDirectDeparture" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="tableviewdirectdeparture" prefHeight="448.0" prefWidth="1024.0">
+                                             <columns>
+                                                <TableColumn fx:id="columnnumberofdirectdeparture" prefWidth="146.29" text="Номер відправлення" />
+                                                <TableColumn fx:id="columndirectfirstnamesender" prefWidth="146.29" text="Ім'я відправника" />
+                                                <TableColumn fx:id="columndirectlastnamesender" prefWidth="146.29" text="Прізвище відправника" />
+                                                <TableColumn fx:id="columndirectfirstnamerecipient" prefWidth="146.29" text="Ім'я отримувача" />
+                                                <TableColumn fx:id="columndirectlastnamerecipient" prefWidth="146.29" text="Прізвище отримувача" />
+                                                <TableColumn fx:id="columndirectfirstnamecarrier" prefWidth="146.29" text="Ім'я перевізника" />
+                                                <TableColumn fx:id="columndirectlastnamecarrier" prefWidth="142.0" text="Прізвище перевізника" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                              <Tab text="Оформити відправлення">
+                                 <content>
+                                    <AnchorPane prefHeight="502.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;">
+                                       <children>
+                                          <Button fx:id="confirmDeparture" layoutX="357.0" layoutY="408.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="310.0" style="-fx-background-color: #FEBD69;" text="Оформити замовлення" textFill="WHITE">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="15.0" />
+                                             </font>
+                                          </Button>
+                                          <TextField fx:id="firstNameSenderField" layoutX="45.0" layoutY="14.0" prefHeight="46.0" prefWidth="390.0" promptText="Ім'я відправника">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="lastNameRecipientField" layoutX="45.0" layoutY="182.0" prefHeight="46.0" prefWidth="390.0" promptText="Прізвище отримувача">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="shippingAdressField" layoutX="45.0" layoutY="237.0" prefHeight="46.0" prefWidth="390.0" promptText="Адреса відправлення">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="firstNameRecipientField" layoutX="45.0" layoutY="127.0" prefHeight="46.0" prefWidth="390.0" promptText="Ім'я отримувача">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="receivingAddressField" layoutX="45.0" layoutY="292.0" prefHeight="46.0" prefWidth="390.0" promptText="Адреса отримання">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="lengthField" layoutX="575.0" layoutY="11.0" prefHeight="46.0" prefWidth="390.0" promptText="Довжина">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="costDepartureField" layoutX="575.0" layoutY="237.0" prefHeight="46.0" prefWidth="390.0" promptText="Ціна перевезення">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="costParcelField" layoutX="575.0" layoutY="292.0" prefHeight="46.0" prefWidth="390.0" promptText="Оціночна вартість посилки">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="heightField" layoutX="575.0" layoutY="124.0" prefHeight="46.0" prefWidth="390.0" promptText="Висота">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="phoneRecipientField" layoutX="45.0" layoutY="350.0" prefHeight="46.0" prefWidth="390.0" promptText="Номер отримувача">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="lastNameSenderField" layoutX="45.0" layoutY="69.0" prefHeight="46.0" prefWidth="390.0" promptText="Прізвище відправника">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="widthField" layoutX="575.0" layoutY="69.0" prefHeight="46.0" prefWidth="390.0" promptText="Ширина">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="weightField" layoutX="575.0" layoutY="182.0" prefHeight="46.0" prefWidth="390.0" promptText="Вага відправлення">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="contentShippingField" layoutX="575.0" layoutY="350.0" prefHeight="46.0" prefWidth="390.0" promptText="Вміст відправлення">
+                                             <font>
+                                                <Font name="Verdana Bold Italic" size="14.0" />
+                                             </font>
+                                          </TextField>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </content>
+                      </Tab>
+                      <Tab text="Персональна інформація">
+                          <content>
+                              <AnchorPane prefHeight="502.0" prefWidth="1024.0" style="-fx-background-color: #ffffff;">
+                                  <children>
+                                      <PasswordField fx:id="passwordField" layoutX="45.0" layoutY="197.0" prefHeight="46.0" prefWidth="390.0" promptText="Пароль">
+                                          <font>
+                                              <Font name="Verdana Bold Italic" size="14.0" />
+                                          </font>
+                                      </PasswordField>
+                                      <TextField fx:id="loginField" layoutX="45.0" layoutY="119.0" prefHeight="46.0" prefWidth="390.0" promptText="Логін">
+                                          <font>
+                                              <Font name="Verdana Bold Italic" size="14.0" />
+                                          </font>
+                                      </TextField>
+                                      <TextField fx:id="lastNameField" layoutX="573.0" layoutY="119.0" prefHeight="46.0" prefWidth="390.0" promptText="Прізвище">
+                                          <font>
+                                              <Font name="Verdana Bold Italic" size="14.0" />
+                                          </font>
+                                      </TextField>
+                                      <TextField fx:id="firstNameField" layoutX="573.0" layoutY="197.0" prefHeight="46.0" prefWidth="390.0" promptText="Ім'я">
+                                          <font>
+                                              <Font name="Verdana Bold Italic" size="14.0" />
+                                          </font>
+                                      </TextField>
+                                      <TextField fx:id="phoneField" layoutX="45.0" layoutY="273.0" prefHeight="46.0" prefWidth="390.0" promptText="Телефон">
+                                          <font>
+                                              <Font name="Verdana Bold Italic" size="14.0" />
+                                          </font>
+                                      </TextField>
+                                      <TextField fx:id="emailField" layoutX="573.0" layoutY="273.0" prefHeight="46.0" prefWidth="390.0" promptText="Email">
+                                          <font>
+                                              <Font name="Verdana Bold Italic" size="14.0" />
+                                          </font>
+                                      </TextField>
+                              <Button fx:id="changePersonalDataButton" layoutX="390.0" layoutY="370.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="246.0" style="-fx-background-color: #FEBD69;" text="Змінити" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana Bold Italic" size="15.0" />
+                                 </font>
+                              </Button>
+                                  </children>
+                              </AnchorPane>
+                          </content>
+                      </Tab>
+                  </tabs>
+              </TabPane>
+            <Button fx:id="refreshButton" layoutX="35.0" layoutY="24.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="214.0" style="-fx-background-color: #FEBD69;" text="Оновити" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="exitButton" layoutX="775.0" layoutY="24.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="214.0" style="-fx-background-color: #FEBD69;" text="Вийти" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold Italic" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
     </children>
 </AnchorPane>

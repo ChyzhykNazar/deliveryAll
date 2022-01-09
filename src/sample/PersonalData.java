@@ -2,8 +2,8 @@ package sample;
 
 public class PersonalData {
     private int idPersonalData;
-    private int login;
-    private int password;
+    private String login;
+    private String password;
     private String firstName;
     private String lastName;
     private String phone;
@@ -20,9 +20,9 @@ public class PersonalData {
         return idPersonalData;
     }
 
-    public int getLogin() { return login; }
+    public String getLogin() { return login; }
 
-    public int getPassword() { return password; }
+    public String getPassword() { return password; }
 
     public String getFirstName() { return firstName; }
 
@@ -42,9 +42,9 @@ public class PersonalData {
         this.idPersonalData = idPersonalData;
     }
 
-    public void setLogin(int login) { this.login = login; }
+    public void setLogin(String login) { this.login = login; }
 
-    public void setPassword(int password) { this.password = password; }
+    public void setPassword(String password) { this.password = password; }
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
